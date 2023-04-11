@@ -1,13 +1,6 @@
-using System;
-
-class Program
-{
-    static void Main(string[] args)
+static int GCD(int a, int b)
     {
-        int num1, num2;
-        Console.Write("Enter the First Number : ");
-        num1 = int.Parse(Console.ReadLine());
-        Console.Write("Enter the Second Number : ");
-        num2 = int.Parse(Console.ReadLine());
+        if (b == 0)
+            return a;
+        return GCD(b, a % b);
     }
-}
